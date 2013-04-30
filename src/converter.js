@@ -3,16 +3,16 @@ define(function (require, exports, module) {
 		_ = new underscoreConstructor;
 	var BOLD_RE = /[*_]{2}(.*?)[*_]{2}/g,
 		ITALIC_RE = /[*_]{1}([^_*]+)[*_]{1}/g,
-		NEWLINE_RE = /\s{2}[\r\n]/g,
-		BACK_SLASH_NEWLINE_RE = /```[\r\n]/g,
-		CODE_BLOCK_RE = /```([\w\W]+?)```/gm,
+		//NEWLINE_RE = /\s{2}[\r\n]/g,
+		NEWLINE_RE = /[\r\n]/g,
+		CODE_BLOCK_RE = /```[\r\n]?([\w\W]+?)```[\r\n]?/g,
 		CODE_FRAG_RE = /`([^`]+?)`/g,
-		H1_RE = /(#{1})(.*)(?!#)/g,
-		H2_RE = /(#{2})(.*)(?!#)/g,
-		H3_RE = /(#{3})(.*)(?!#)/g,
-		H4_RE = /(#{4})(.*)(?!#)/g,
-		H5_RE = /(#{5})(.*)(?!#)/g,
-		H6_RE = /(#{6})(.*)(?!#)/g;
+		H1_RE = /(#{1})(.*)(?!#)[\r\n]?/g,
+		H2_RE = /(#{2})(.*)(?!#)[\r\n]?/g,
+		H3_RE = /(#{3})(.*)(?!#)[\r\n]?/g,
+		H4_RE = /(#{4})(.*)(?!#)[\r\n]?/g,
+		H5_RE = /(#{5})(.*)(?!#)[\r\n]?/g,
+		H6_RE = /(#{6})(.*)[\r\n]?/g;
 
 	var parsers = {
 		doBold: function(str) {
@@ -21,10 +21,6 @@ define(function (require, exports, module) {
 		},
 		doItalic: function(str) {
 			str = str.replace(ITALIC_RE, '<em>$1</em>');
-			return str;
-		},
-		doBackSlashNewline: function(str) {
-			str = str.replace(BACK_SLASH_NEWLINE_RE, '```');
 			return str;
 		},
 		doCodeBlock: function(str) {
