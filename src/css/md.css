@@ -1,0 +1,149 @@
+body {
+	padding: 10px;
+}
+
+h1 {
+	font-size: 24px;
+	font-family: arial;
+	font-weight: bold;
+}
+
+.markdown {
+	padding: 5px;
+	margin: 0 auto;
+	border: 1px solid black;
+	height: 800px;
+	min-width: 1000px;
+	border-radius: 5px;
+}
+
+.markdown p {
+	margin: 5px;
+}
+
+.markdown-edit-zone {
+	width: 48%;
+	height: 98%;
+	float: left;
+	padding: 5px;
+}
+
+.markdown-edit-zone textarea {
+	width: 99%;
+	height: 95%;
+	border-radius: 5px;
+}
+
+.markdown-show-zone {
+	width: 49%;
+	height: 98%;
+	float: right;
+	padding: 5px;
+}
+
+#input {
+	padding: 8px;
+}
+
+#output {
+	width: 97%;
+	height: 95%;
+	border-radius: 5px;
+	border: 1px solid black;
+	padding: 8px;
+}
+
+.markdown-show-zone strong, b {
+	font-weight: bold;
+}
+
+.markdown-show-zone em, i {
+	font-style: italic;
+}
+
+.markdown-show-zone pre {
+	background-color: #f8f8f8;
+	border: 1px solid #ccc;
+	font-size: 13px;
+	line-height: 19px;
+	overflow: auto;
+	padding: 6px 10px;
+	border-radius: 3px;
+	margin: 15px 0;
+}
+
+.markdown-show-zone pre, code, tt {
+	font-size: 12px;
+	font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+
+.markdown-show-zone code {
+	border-radius: 3px;
+	font-size: 12px;
+	font-family: Consolas, "Liberation Mono", Courier, monospace;
+	margin: 0 2px;
+	padding: 0px 5px;
+	border: 1px solid #eaeaea;
+	background-color: #f8f8f8;
+}
+
+.markdown-show-zone pre code, pre tt {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}
+
+.markdown-show-zone pre > code {
+	white-space: pre;
+	border-radius: 3px;
+}
+
+.markdown-show-zone h1, h2, h3, h4, h5, h6 {
+	margin: 20px 0 10px;
+	padding: 0;
+	font-weight: bold;
+	-webkit-font-smoothing: antialiased;
+	cursor: text;
+	position: relative;
+}
+
+.markdown-show-zone h1 {
+	font-size: 28px;
+	color: #000;
+}
+
+.markdown-show-zone h2 {
+	font-size: 24px;
+	border-bottom: 1px solid #ccc;
+	color: #000;
+}
+
+.markdown-show-zone h3 {
+	font-size: 18px;
+}
+
+.markdown-show-zone h4 {
+	font-size: 16px;
+}
+
+.markdown-show-zone h5 {
+	font-size: 14px;
+}
+
+.markdown-show-zone h6 {
+	font-size: 12px;
+}
+
+.markdown-show-zone *:last-child {
+	margin-bottom: 0 !important;
+}
+
+.clearfix:after{
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden
+}

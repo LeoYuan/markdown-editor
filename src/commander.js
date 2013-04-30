@@ -1,3 +1,13 @@
 define(function (require, exports, module) {
-	console.log('commander');
+	var $ = require('$');
+	var mdConverter = require('./converter');
+	var ret = '';
+
+	//debugger;
+	$('#input').keyup(function() {
+		ret = mdConverter.convert($(this).val());
+		$('#output').html(ret);
+	}).focus();
+
+
 });

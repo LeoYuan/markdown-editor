@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 <html>
-	<head></head>
+	<head>
+		<link rel="stylesheet" type="text/css" href="src/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="src/css/md.css">
+		<script src='lib/sea.js' data-main='./src/commander' data-config='./src/config'></script>
+	</head>
 	<body>
-		<script src='lib/sea.js' data-main='./src/main' data-config='./src/config'></script>
+		
+		<script type="text/javascript">
+			/*seajs.use('./src/commander', function (commander) {
+
+			});*/
+		</script>
+		<h1>Markdown Editor and Parser</h1>	
+		<div class="markdown">
+			<div class="markdown-edit-zone">
+				<p>Edit Zone</p>
+				<textarea id='input'></textarea>
+			</div>
+			<div class="markdown-show-zone clearfix">
+				<p>Display Zone</p>
+				<div id='output'></div>
+			</div>
+		</div>
 	</body>
 </html>
