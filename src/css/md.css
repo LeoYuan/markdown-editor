@@ -61,6 +61,11 @@ h1 {
 	font-style: italic;
 }
 
+.markdown-show-zone {
+	font-size: 14px;
+	line-height: 1.6;
+}
+
 .markdown-show-zone pre {
 	background-color: #f8f8f8;
 	border: 1px solid #ccc;
@@ -138,6 +143,23 @@ h1 {
 
 .markdown-show-zone *:last-child {
 	margin-bottom: 0 !important;
+}
+
+.markdown-show-zone ul {
+	padding-left: 30px;
+}
+
+.markdown-show-zone ol {
+	padding-left: 30px;
+}
+
+.markdown-show-zone a {
+	color: #4183c4;
+	text-decoration: none;
+}
+
+.markdown-show-zone a:hover {
+	text-decoration: underline;
 }
 
 .clearfix:after{
