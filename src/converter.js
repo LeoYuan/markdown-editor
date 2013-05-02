@@ -111,7 +111,6 @@ define(function (require, exports, module) {
 		},
 		doBlockquote: function(str) {
 			str = str.replace(BLOCKQUOTO, function(whole) {
-				//console.log(whole);
 				// remove ">" sign and dangling newline.
 				whole = whole.replace(/>\s*/g, '').replace(/[\r\n]{2,}$/, '\r');
 				return '<blockquote><p>' + whole + '</p></blockquote>';
