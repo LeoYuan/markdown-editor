@@ -1,6 +1,4 @@
 define(function (require, exports, module) {
-	var underscoreConstructor = require('_'),
-		_ = new underscoreConstructor;
 	var BOLD_RE = /[*_]{2}(.*?)[*_]{2}/g,
 		ITALIC_RE = /[*_]{1}([^_*\s]+)[*_]{1}/g,
 		NEWLINE_RE = /[\r\n]/g,
