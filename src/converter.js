@@ -12,8 +12,8 @@ define(function (require, exports, module) {
 		H4_RE = /(#{4})(.*)(?!#)[\r\n]?/g,
 		H5_RE = /(#{5})(.*)(?!#)[\r\n]?/g,
 		H6_RE = /(#{6})(.*)[\r\n]?/g,
-		UNORDERED_LIST_RE = /\*\s*([\w\W]+?)[\r\n]{2}/g,
-		ORDERED_LIST_RE = /\d+\.\s*([\w\W]+?)[\r\n]{2}/g,
+		UNORDERED_LIST_RE = /(\*\s*([\w\W]+?)[\r\n]?)+/g,
+		ORDERED_LIST_RE = /(\d+\.\s*([\w\W]+?)[\r\n]?)+/g,
 		LINK_RE = /\[(\w+)\]\(([\w\W]+?)\)[\r\n]?/g,
 		IMAGE_RE = /!\[(\w+)\]\(([\w\W]+?)\)[\r\n]?/g;
 
