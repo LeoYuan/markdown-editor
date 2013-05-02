@@ -13,7 +13,8 @@ define(function (require, exports, module) {
 		UNORDERED_LIST_RE = /(\*\s*([\w\W]+?)[\r\n]?)+/g,
 		ORDERED_LIST_RE = /(\d+\.\s*([\w\W]+?)[\r\n]?)+/g,
 		LINK_RE = /\[(\w+)\]\(([\w\W]+?)\)[\r\n]?/g,
-		IMAGE_RE = /!\[(\w+)\]\(([\w\W]+?)\)[\r\n]?/g;
+		IMAGE_RE = /!\[(\w+)\]\(([\w\W]+?)\)[\r\n]?/g,
+		BLOCKQUOTO = />([\w\W]+?)[\r\n]{2}/g;
 
 	var parsers = {
 		doBold: function(str) {
@@ -105,6 +106,15 @@ define(function (require, exports, module) {
 					return '<a href="' + url + '" title="' + title + '">' + text + '</a>';
 				}
 				return '<a href="' + urlAndTitle + '">' + text + '</a>';
+			});
+			return str;
+		},
+		doBlockquote: function(str) {
+			str = str.replace(BLOCKQUOTO, function(whole) {
+				//console.log(whole);
+				// remove ">" sign and dangling newline.
+				whole = whole.replace(/>\s*/g, '').replace(/[\r\n]{2,}$/, '\r');
+				return '<blockquote><p>' + whole + '</p></blockquote>';
 			});
 			return str;
 		},

@@ -6,7 +6,7 @@ define(function (require, exports, module) {
 	//debugger;
 	$('#input').keyup(function() {
 		ret = mdConverter.convert($(this).val());
-		console.log('final string -> ' + ret);
+		//console.log('final string -> ' + ret);
 		$('#output').html(ret);
 	}).focus();
 
